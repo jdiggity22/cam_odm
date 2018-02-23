@@ -1,0 +1,71 @@
+{
+  "specVersion": "1.0",
+  "service_metadata": {
+    "name": "ODM_REST_Call_w_Select",
+    "description": "REST call to ODM",
+    "longDescription": "",
+    "providerDisplayName": "",
+    "image": "serviceicon_1.svg",
+    "category": "jow",
+    "bullets": [
+      {
+        "title": "Clouds",
+        "description": "IBM Bluemix Platform"
+      }
+    ],
+    "author": "admin"
+  },
+  "plan": [
+    {
+      "Standard": {
+        "plan_parameters": [
+          {
+            "name": "odm_res",
+            "immutable": true,
+            "hidden": true,
+            "secured": false,
+            "default": "http://10.0.0.241:9060"
+          },
+          {
+            "name": "memory",
+            "label": "Select Memory (GB)",
+            "customtype": "counter",
+            "type": "list",
+            "immutable": false,
+            "hidden": false,
+            "secured": false,
+            "description": "Requested memory for your Virtual Instance",
+            "default": "1",
+            "required": false,
+            "permission": "Read-Write"
+          }
+        ],
+        "conditions": [],
+        "templates": [],
+        "resthooks": [
+          {
+            "resthook": {
+              "title": "resthook",
+              "id": "resthook63461227",
+              "headers": {
+                "accept": "application/json",
+                "Content-Type": "application/json"
+              },
+              "url": "${plan_parameters.odm_res}/DecisionService/rest/CAMRulesDeployment/1.0/valdateMemory/1.0",
+              "method": "POST",
+              "payload": {
+                "memory": "${plan_parameters.memory}",
+                "__DecisionID__": "string"
+              }
+            }
+          }
+        ],
+        "notifications": [],
+        "service_process": {},
+        "sequence": {
+          "0": "resthook63461227"
+        }
+      }
+    }
+  ]
+}
