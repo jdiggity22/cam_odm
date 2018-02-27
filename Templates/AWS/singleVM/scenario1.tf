@@ -16,8 +16,7 @@ provider "aws" {
   region  = "us-east-1"
 }
 
-variable "restinput" {
-  description = "Sample input variable from service"
+resource "cam_input" {
   default = "${var.templateinput}"
 }
 	
