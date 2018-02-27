@@ -18,7 +18,7 @@ provider "aws" {
 
 variable "restinput" {
   description = "Sample input variable from service"
-  default = "${var.restinput}"
+  default = "${var.templateinput}"
 }
 	
 
