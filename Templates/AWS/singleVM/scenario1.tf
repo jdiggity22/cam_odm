@@ -13,7 +13,7 @@
 
 provider "aws" {
   version = "~> 1.2"
-  region  = "us-east-2a"
+  region  = "us-east-1"
 }
 
 variable "aws_region" {
