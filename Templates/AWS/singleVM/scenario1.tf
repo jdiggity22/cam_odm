@@ -16,7 +16,7 @@ provider "aws" {
   region  = "us-east-1"
 }
 
-resource "cam_input" {
+resource "cam_input" "var1" {
   default = "${var.templateinput}"
 }
 	
