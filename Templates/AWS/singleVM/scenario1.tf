@@ -13,7 +13,7 @@
 
 provider "aws" {
   version = "~> 1.2"
-  region  = "${var.aws_region}"
+  region  = "us-east-2a"
 }
 
 variable "aws_region" {
@@ -23,10 +23,12 @@ variable "aws_region" {
 
 variable "vpc_name_tag" {
   description = "Name of the Virtual Private Cloud (VPC) this resource is going to be deployed into"
+  default = "icpVPC"
 }
 
 variable "subnet_cidr" {
   description = "Subnet cidr"
+  default = "172.31.0.0/20"
 }
 
 data "aws_vpc" "selected" {
@@ -46,10 +48,12 @@ data "aws_subnet" "selected" {
 
 variable "public_ssh_key_name" {
   description = "Name of the public SSH key used to connect to the virtual guest"
+  default = "jowkey"
 }
 
 variable "public_ssh_key" {
   description = "Public SSH key used to connect to the virtual guest"
+  default = "sh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDcBLUeO7Nlj8+R0gbDRUmxwbXbUwiGLSUn46y0ad5MCXrwSfXUWFHa6AU8bvCu2FNM5XHV/Zopv+of3J+vtcdrikyFw7JAJ+92LDGzc6lg7nTCp6YF0mhdviVsf/cZhHf+YWAIbPdhEto7/TJuRoK1iUcqM7WyfQtnshGhawLk6kJ6Ymtil90XZDtKp1C61lVdlD6lIx0qHfb+ivyMJeBRPtPWJ9h8AQEri8LpbgXriGJuTY0CBugS/1CD4yi3Oo/2F7WWAC6v5auVf2gBQq4s5rDEomnKCgU8UxyguwdPXkVRJLaOWHw1eQD6tD9MQWaYmhTOmNlvePO/P/ilfBEf root@ycfcmaster"
 }
 
 #Variable : AWS image name
