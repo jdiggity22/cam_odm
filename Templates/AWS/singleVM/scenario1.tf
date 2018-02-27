@@ -53,7 +53,7 @@ variable "public_ssh_key_name" {
 
 variable "public_ssh_key" {
   description = "Public SSH key used to connect to the virtual guest"
-  default = "sh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDcBLUeO7Nlj8+R0gbDRUmxwbXbUwiGLSUn46y0ad5MCXrwSfXUWFHa6AU8bvCu2FNM5XHV/Zopv+of3J+vtcdrikyFw7JAJ+92LDGzc6lg7nTCp6YF0mhdviVsf/cZhHf+YWAIbPdhEto7/TJuRoK1iUcqM7WyfQtnshGhawLk6kJ6Ymtil90XZDtKp1C61lVdlD6lIx0qHfb+ivyMJeBRPtPWJ9h8AQEri8LpbgXriGJuTY0CBugS/1CD4yi3Oo/2F7WWAC6v5auVf2gBQq4s5rDEomnKCgU8UxyguwdPXkVRJLaOWHw1eQD6tD9MQWaYmhTOmNlvePO/P/ilfBEf root@ycfcmaster"
+  default = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDcBLUeO7Nlj8+R0gbDRUmxwbXbUwiGLSUn46y0ad5MCXrwSfXUWFHa6AU8bvCu2FNM5XHV/Zopv+of3J+vtcdrikyFw7JAJ+92LDGzc6lg7nTCp6YF0mhdviVsf/cZhHf+YWAIbPdhEto7/TJuRoK1iUcqM7WyfQtnshGhawLk6kJ6Ymtil90XZDtKp1C61lVdlD6lIx0qHfb+ivyMJeBRPtPWJ9h8AQEri8LpbgXriGJuTY0CBugS/1CD4yi3Oo/2F7WWAC6v5auVf2gBQq4s5rDEomnKCgU8UxyguwdPXkVRJLaOWHw1eQD6tD9MQWaYmhTOmNlvePO/P/ilfBEf root@ycfcmaster"
 }
 
 #Variable : AWS image name
